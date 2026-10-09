@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenue",
+  "cart": "Panier",
+  "checkout": "Commander",
+  "checkout_confirm": "Confirmation de commande",
+  "payment_success": "Paiement réussi",
+  "payment_failed": "Échec du paiement",
+  "shipping_address": "Adresse de livraison",
+  "billing_address": "Adresse de facturation",
+  "order_summary": "Récapitulatif de la commande",
+  "continue_shopping": "Continuer mes achats"
+}

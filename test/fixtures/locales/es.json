@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenido",
+  "cart": "Carrito",
+  "checkout": "Pagar",
+  "checkout_confirm": "Confirmación de compra",
+  "payment_failed": "Pago fallido",
+  "shipping_address": "Dirección de envío",
+  "billing_address": "Dirección de facturación",
+  "order_summary": "Resumen del pedido",
+  "continue_shopping": "Seguir comprando",
+  "region_note": "Nota regional"
+}

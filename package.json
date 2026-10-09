@@ -1,0 +1,34 @@
+{
+  "name": "localbolt-ci",
+  "version": "1.0.0",
+  "description": "Fail CI before a translator finds the missing key. Diffs every locale file against your base locale and exits non-zero on any gap.",
+  "license": "SEE LICENSE IN LICENSE",
+  "bin": {
+    "localbolt-ci": "./cli.js"
+  },
+  "main": "cli.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growaleaf/localbolt-ci.git"
+  },
+  "keywords": [
+    "i18n",
+    "l10n",
+    "localization",
+    "translation",
+    "missing keys",
+    "ci",
+    "continuous-integration"
+  ],
+  "files": [
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ]
+}

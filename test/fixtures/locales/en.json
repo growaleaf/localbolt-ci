@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome",
+  "cart": "Cart",
+  "checkout": "Checkout",
+  "checkout_confirm": "Checkout Confirmation",
+  "payment_success": "Payment Successful",
+  "payment_failed": "Payment Failed",
+  "shipping_address": "Shipping Address",
+  "billing_address": "Billing Address",
+  "order_summary": "Order Summary",
+  "continue_shopping": "Continue Shopping"
+}

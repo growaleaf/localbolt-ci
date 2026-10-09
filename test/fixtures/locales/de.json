@@ -1,0 +1,10 @@
+{
+  "welcome": "Willkommen",
+  "cart": "Warenkorb",
+  "checkout": "Kasse",
+  "payment_failed": "Zahlung fehlgeschlagen",
+  "shipping_address": "Lieferadresse",
+  "billing_address": "Rechnungsadresse",
+  "order_summary": "Bestellübersicht",
+  "continue_shopping": "Weiter einkaufen"
+}
