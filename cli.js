@@ -34,7 +34,19 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDXST4uXIYojaKh87zlus/oEOXucVdFJCBxI1F6qejPA8
 -----END PUBLIC KEY-----`;
 const LICENSE_PRODUCT = 'localbolt-pro';
 
-function b64urlToBuf(s) { return Buffer.from(s.replace(/-/g, '+').replace(/_/g, '/'), 'base64'); }
+// Buffer.from(x, 'base64') silently drops trailing bytes that don't complete a group of 4,
+// so appending garbage to a valid base64url string sometimes decodes to the SAME bytes as
+// the untampered original — tamper detection then passes by luck, not by design (the same
+// bug found and fixed in all 6 D-lane extensions' src/license.js on 2026-09-07; this
+// standalone copy was written fresh on 2026-10-09 from the pre-fix shape). The round-trip
+// check makes any non-canonical input fail closed instead of depending on where the
+// tampered byte happens to land relative to a 4-byte boundary.
+function b64urlToBuf(s) {
+  const buf = Buffer.from(s.replace(/-/g, '+').replace(/_/g, '/'), 'base64');
+  const canonical = buf.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  if (canonical !== s) throw new Error('non-canonical base64url');
+  return buf;
+}
 
 function verifyLicenseWith(key, pubPem) {
   try {
